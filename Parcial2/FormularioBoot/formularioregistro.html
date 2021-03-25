@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>RegistrarAlumno</title>
+    <style>
+        h3{
+            color: rgb(14, 219, 41);
+            font-size: 22px;
+        }
+        .form-group label{
+            font-size: 16px;
+            color: #000;
+        }
+        body{
+            background-image: url(https://expreso.press/wp-content/uploads/2019/04/tec-nuevolaredo.jpg) ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+            
+        }
+        button{
+            background-color: green;
+        }
+       
+    </style>
+</head>
+<body>
+    <form>
+<div class="container align-self-center p-12">
+        <div class="form-group col-sm-12 col-md-4 col-lg-6"> 
+            <h3>Resgistro para Alumno</h3>
+            <label for="NombredeAlumno" class="control-label">Nombre de Alumno</label>
+            <input type="text" class="form-control" id="NombredeAlumno" name="NombredeAlumno" placeholder="Introduzca el nombre del Alumno">
+        </div>    
+    
+        <div class="form-group col-sm-12 col-md-4 col-lg-6"> 
+            <label for="NumeroControl" class="control-label">Numero de Control</label>
+            <input type="text" class="form-control" id="NumeroControl" name="NumeroControl" placeholder="Introduzca el numero de control">
+        </div>                    
+                                
+        <div class="form-group col-sm-12 col-md-4 col-lg-6"> 
+            <label for="Telefono" class="control-label">Telefono</label>
+            <input type="text" class="form-control" id="Telefono" name="Telefono" placeholder="Introduzca el telefono(con la lada)">
+        </div>    
+    
+        <div class="form-group col-sm-12 col-md-4 col-lg-6"> 
+            <label for="CorreoElectronico" class="control-label">CorreoElectronico</label>
+            <input type="text" class="form-control" id="CorreoElectronico" name="CorreoElectronico" placeholder="Introduzca CorreoElectronico">
+        </div>                                    
+                                
+        <div class="form-group col-sm-12 col-md-4 col-lg-6"> 
+            <label for="carrera" class="control-label">Carrera</label>
+            <select class="form-control" id="Carrera">
+                <option value="ISC">Ing. En Sistemas</option>
+                <option value="ARQ">Arquitectura</option>
+                <option value="IGI">Ing. Industrial</option>
+                <option value="IGE">Ing. En Gestion Empresarial</option>
+                <option value="IGC">Ing. Civil</option>
+                <option value="Mec">Ing. Mecanica</option>
+                <option value="Electronico">Ing. Electronica</option>
+                <option value="Electrica">Ing. Electrica</option>
+                <option value="CO">Contador Publico</option>
+            </select>                    
+        </div>
+        <div class="form-group col-sm-12 col-md-4 col-lg-6"> 
+            <input style="background-color: green" value="Registrar" name="button" type="submit"/>
+        </div>     
+        <div>
+            
+        </div>
+    </div>
+    </form>
+</body>
+</html>
