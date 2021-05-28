@@ -1,5 +1,5 @@
-create database tarea1;
-use tarea1
+create database garciaso;
+use garciaso;
 
 create table usuarios
 (
@@ -13,4 +13,4 @@ create table usuarios
 
 );
 insert into usuarios (nombrealumno,NumDeControl, telefono,email,carrera,password)
-values('Angel Sebastian Garcia Sosa','18100174','(867)7523656','chevis.123@hotmail.com','ISC' );
+values('Angel Sebastian Garcia Sosa','18100174','(867)7523656','chevis.123@hotmail.com','ISC' ,'123');
