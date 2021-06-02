@@ -1,7 +1,7 @@
 <?php
-include "conectar.php";
+include "conection.php";
 try {
-    $consultaSql = "select nombre,apPaterno,apMaterno,login from cusuario";
+    $consultaSql = "select nombrealumno,NumDeControl,telefono,email,carrera,pass from usuarios";
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_NUM);
@@ -17,7 +17,7 @@ try {
     printf("<b>telefono = </b> %s <br>",$resultado[2]);
     printf("<b>email     = </b> %s <br>",$resultado[3]);
     printf("<b>carrera     = </b> %s <br>",$resultado[4]);
-    printf("<b>password   = </b> %s <br>",$resultado[5]);
+    printf("<b>pass   = </b> %s <br>",$resultado[5]);
     print "<br><br><br>";
 
 

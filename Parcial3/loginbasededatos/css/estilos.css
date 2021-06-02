@@ -62,6 +62,44 @@ p{
 .link:hover{
      color: cadetblue;
 }
+
+.msg-error{
+    color:red;
+    display: block;
+    margin-top: 10px;;
+}
+
+.ctn-welcome{
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 40px;
+    margin: auto;
+    margin-top: 100px;
+    background: white;
+    border-radius: 20px;
+}
+
+.title-welcome{
+font-weight: 400;
+font-size: 40px;
+margin-top: 20px;
+background: black;
+}
+
+.close-sesion{
+  width: 100%;  
+  max-width: 600px;
+  margin: aunto;
+  display: block;
+  padding:20px;
+  margin-top: 40px;
+  background: rgb(11, 12, 12);
+  color:rgb(10, 9, 9);
+  font-size: 20px;
+  font-weight: 300;
+}
+
 @media(min-width:768px)
 {
     .formulario{

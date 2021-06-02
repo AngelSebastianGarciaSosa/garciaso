@@ -1,3 +1,7 @@
+<?php
+include 'registroindex.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,31 +14,31 @@
 
 </head>  
 <body>
- <form class="formulario">
+ <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="formulario">
     
     <h1>Registrate</h1>
      <div class="contenedor">
      
      <div class="input-contenedor">
          <i class="fas fa-user icon"></i>
-         <input type="text" placeholder="Nombre Completo">
-         
+         <input type="text" name="username" placeholder="Nombre Completo">
+         <span class="msg-error"><?php echo $username_error;?></span>
          </div>
          
          <div class="input-contenedor">
          <i class="fas fa-envelope icon"></i>
-         <input type="text" placeholder="Correo Electronico">
-         
+         <input type="text" name="email" placeholder="Correo Electronico">
+         <span class="msg-error"><?php echo $email_error; ?></span>
          </div>
          
          <div class="input-contenedor">
         <i class="fas fa-key icon"></i>
-         <input type="password" placeholder="Contraseña">
-         
+         <input type="password" name="password" placeholder="Contraseña">
+         <span class="msg-error"><?php echo $password_error; ?></span>
          </div>
          <input type="submit" value="Registrate" class="button">
          <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-         <p>¿Ya tienes una cuenta?<a class="link" href="loginvista.html">Iniciar Sesion</a></p>
+         <p>¿Ya tienes una cuenta?<a class="link" href="loginvista.php">Iniciar Sesion</a></p>
      </div>
     </form>
 </body>
