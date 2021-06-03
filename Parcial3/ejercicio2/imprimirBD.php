@@ -1,26 +1,26 @@
 <?php
 include "conection.php";
 try {
-    $consultaSql = "select nombrealumno,NumDeControl,telefono,email,carrera,pass from usuarios";
+    $consultaSql = "select * from usuarios";
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
-    $resultado = $consulta->fetch(PDO::FETCH_NUM);
+    $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 
-    print"<h2>fetch(PDO::FETCH_NUM)</h2>";
+    print"<h2> Registro de alumnos</h2>";
     print "<br>";
-    print_r($resultado);
-    var_dump($resultado);
+    for($i=0; $i<=count($resultado)-1; $i++){
+    print("<b> Alumno numero: </b>".($i+1)."<br>");
     print "<br>";
-    printf("<b>nombrealumno   = </b> %s <br>",$resultado[0]);
-    printf("<b>NumDeControl = </b> %s <br>",$resultado[1]);
-    printf("<b>telefono = </b> %s <br>",$resultado[2]);
-    printf("<b>email     = </b> %s <br>",$resultado[3]);
-    printf("<b>carrera     = </b> %s <br>",$resultado[4]);
-    printf("<b>pass   = </b> %s <br>",$resultado[5]);
-    print "<br><br><br>";
+    printf("<b>nombrealumno   = </b> ".$resultado[$i]['nombrealumno']."<br>");
+    printf("<b>NumDeControl = </b> ".$resultado[$i]['NumDeControl']."<br>");
+    printf("<b>telefono = </b> ".$resultado[$i]['telefono']."<br>");
+    printf("<b>email  = </b>".$resultado[$i]['email']."<br>");
+    printf("<b>carrera     = </b> ".$resultado[$i]['carrera']."<br>");
+    printf("<b>pass   = </b> ".$resultado[$i]['pass']."<br>");
+    print "<br>";
 
-
+    }
     $consulta->closeCursor();
 }
 catch(PDOException $e)
