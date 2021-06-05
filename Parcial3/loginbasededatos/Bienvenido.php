@@ -21,5 +21,13 @@ if(! isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true){
    <h1 class="title-welcome">Bienveni@ <?php echo $_SESSION['usuario'] ?> </h1>
    <a href="cierredesesion.php" class=""close-sesion>Cerrar Sesion</a>
    </div>
+<ul>
+<li><a href="">Dar de alta a un nuevo alumno</a></li> <br>
+<li><a href="">Consultar los datos de un alumno</a></li> <br>
+<li><a href="">Mostrar todos los registros de  alumnos</a></li><br>
+<li><a href=""></a>Dar de baja a un alumno</li><br>
+
+</ul>
+
 </body>
 </html>
