@@ -43,7 +43,7 @@ if(! isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true){
    <div class="row">
       <div class="col-md-3">
       <h1>Agregar Alumno</h1>
-      <form action="insertar.php" method="POST">
+      <form action="insertar.php" method="post">
 
          <input type="text" class="form-control mb-3" name="NumDeControl" placeholder="Numero de control">
          <input type="text" class="form-control mb-3" name="NombreAlumno" placeholder="Nombre del alumno">
@@ -57,7 +57,7 @@ if(! isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true){
         <table class="table">
         <thead class="table-dark table stripped" >
         <tr>
-            
+            <th>id</th>
             <th>NumDeControl</th>
             <th>NombreAlumno</th>
             <th>Email</th>
@@ -69,17 +69,17 @@ if(! isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true){
 
         <tbody>
         <?php
-        while($row=mysqli_fetch_array($query){
+        while($row=mysqli_fetch_array($query)){
         
             echo "<tr>";
                
-               
+            echo"<td>".$row['id'] ."</td>";
                echo"<td>".$row['NumDeControl'] ."</td>";
                echo"<td>" .$row['NombreAlumno']." </td>";
               echo "<td>"  .$row['Email']. "</td>";
               echo "<td>"  .$row['Carrera']." </td>";
               echo " <td><a href='actualizar.php?id='  ".$row['id'] ."class='btn btn-info'>Editar</a></td>";
-               // <th><a href="eliminar.php?id= echo $row['id']" class="btn btn-danger">Eliminar</a></th>
+              echo " <td><a href='eliminar.php?id='  ".$row['id'] ."class='btn btn-danger'>Eliminar</a></td>";
            echo "</tr>";
 
             
