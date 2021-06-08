@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: url(../img/imagen.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1{
+    color: black;
+    
+ }
+ 
+ h2{
+     color: black;
+ }
+ 
+ h3{
+     color: black;
+ }
+ h4{
+     color: black;
+ }
+
+ p{
+     color:black;
+     font-size: 25px;
+ }
+
+    .close-sesion{
+        width: 100%;  
+        max-width: 600px;
+        margin: aunto;
+        display: block;
+        padding:20px;
+        margin-top: 40px;
+        background: rgb(11, 12, 12);
+        color:rgb(10, 9, 9);
+        font-size: 20px;
+        font-weight: 300;
+      }
+
+      @media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 500px;
+        margin-top: 150px;
+        border-radius: 2%;
+    }
+}

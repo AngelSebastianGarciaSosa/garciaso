@@ -23,14 +23,14 @@ require "loginindex.php";
          
          <div class="input-contenedor">
          <i class="fas fa-envelope icon"></i>
-         <input type="text" name="email" placeholder="Correo Electronico">
+         <input type="text" autocomplete="off" name="email" placeholder="Correo Electronico">
          <span class="msg-error"><?php echo $email_error; ?></span>
          
          </div>
          
          <div class="input-contenedor">
         <i class="fas fa-key icon"></i>
-         <input type="password" name="password" placeholder="Contraseña">
+         <input type="password" autocomplete="off" name="password" placeholder="Contraseña">
          <span class="msg-error"><?php echo $password_error; ?></span>
          </div>
          <input type="submit" value="Login" class="button">
