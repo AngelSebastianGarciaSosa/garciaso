@@ -34,10 +34,12 @@ if(! isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true){
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<center>
    <div class="ctn-welcome">
       <h1 class="title-welcome">Bienveni@ <?php echo $_SESSION['usuario'] ?> </h1>
       <a href="cierredesesion.php" class=""close-sesion>Cerrar Sesion</a>
    </div>
+   </center>
 
   <div class="container mt-5">
    <div class="row">
@@ -45,16 +47,17 @@ if(! isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true){
       <h1>Agregar Alumno</h1>
       <form action="insertar.php" method="post">
 
-         <input type="text" class="form-control mb-3" name="NumDeControl" placeholder="Numero de control">
-         <input type="text" class="form-control mb-3" name="NombreAlumno" placeholder="Nombre del alumno">
-         <input type="text" class="form-control mb-3" name="Email" placeholder="Email">
-         <input type="text" class="form-control mb-3" name="Carrera" placeholder="Carrera">
+         <input type="text" autocomplete="off" class="form-control mb-3" name="NumDeControl" placeholder="Numero de control">
+         <input type="text" autocomplete="off" class="form-control mb-3" name="NombreAlumno" placeholder="Nombre del alumno">
+         <input type="text" autocomplete="off" class="form-control mb-3" name="Email" placeholder="Email">
+         <input type="text" autocomplete="off" class="form-control mb-3" name="Carrera" placeholder="Carrera">
 
          <input type="submit" class="btn btn-primary">
       </form>
       </div>
          <div class="col-md-8">
         <table class="table">
+        <h3>Alumnos Registrados</h3>
         <thead class="table-dark table stripped" >
         <tr>
             <th>id</th>
@@ -70,20 +73,20 @@ if(! isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true){
         <tbody>
         <?php
         while($row=mysqli_fetch_array($query)){
-        
-            echo "<tr>";
-               
-            echo"<td>".$row['id'] ."</td>";
-               echo"<td>".$row['NumDeControl'] ."</td>";
-               echo"<td>" .$row['NombreAlumno']." </td>";
-              echo "<td>"  .$row['Email']. "</td>";
-              echo "<td>"  .$row['Carrera']." </td>";
-              echo " <td><a href='actualizar.php?id='  ".$row['id'] ."class='btn btn-info'>Editar</a></td>";
-              echo " <td><a href='eliminar.php?id='  ".$row['id'] ."class='btn btn-danger'>Eliminar</a></td>";
-           echo "</tr>";
+        ?>
+             <tr>
+            <td><?php echo $row['id'] ?></td>
+               <td> <?php echo $row['NumDeControl'] ?></td>
+               <td> <?php echo $row['NombreAlumno'] ?></td>
+               <td> <?php echo $row['Email'] ?></td>
+               <td> <?php echo $row['Carrera'] ?></td>
+                <td><a href="actualizar.php?id= <?php  echo $row['id'] ?>"class="btn btn-info">Editar</a></td>
+                <td><a href="eliminar.php?id= <?php  echo $row['id'] ?>"class="btn btn-danger">Eliminar</a></td>
+            </tr>
 
-            
+            <?php
                }
+               
             ?>
         </tbody>
         </table>
